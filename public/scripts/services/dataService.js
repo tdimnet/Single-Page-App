@@ -2,7 +2,7 @@
 
 angular
   .module('app')
-  .service('dataService', function($http) {
+  .service('DataService', function($http) {
 
 
   this.getAllRecipes = function(callbackSuccess, callbackError) {
@@ -49,15 +49,12 @@ angular
   };
 
 
-  this.getRecipe = function () {
-    $http
-      .get('/api/recipes/{id}')
-      .then(function (data) {
-        console.log(data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      })
+  this.getRecipe = function (recipe) {
+    console.log("The " + recipe + " todo has been deleted!")
+    // $http
+    //   .get('/api/recipes/{id}')
+    //   .then(callbackSuccess)
+    //   .catch(callbackError)
   };
 
 
