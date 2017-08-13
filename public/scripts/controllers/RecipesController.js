@@ -23,10 +23,18 @@ angular
       function (error) {
         console.error(error);
       }
-    )
+    );
 
+
+    $scope.addRecipe = function ($index) {
+      console.log('The user wants to create a new recipe!!');
+    };
 
     $scope.getRecipe = function ($index) {
       dataService.getRecipe($index);
-    }
+    };
+
+    $scope.deleteRecipe = function ($index) {
+      dataService.deleteRecipe($index);
+    };
 });
