@@ -2,11 +2,11 @@
 
 angular
   .module('app')
-  .controller('RecipesController', function ($scope, DataService) {
+  .controller('RecipesController', function ($scope, dataService) {
 
 
-    // Get all receipes from the Database or display error message
-    DataService.getAllRecipes(
+    // Get all receipes from the database
+    dataService.getAllRecipes(
       function (response) {
         $scope.recipes = response.data;
       },
@@ -15,8 +15,18 @@ angular
       }
     );
 
+    // Get all categories from the database
+    dataService.getAllCategories(
+      function (response) {
+        $scope.categories = response.data
+      },
+      function (error) {
+        console.error(error);
+      }
+    )
+
 
     $scope.getRecipe = function ($index) {
-      DataService.getRecipe($index);
+      dataService.getRecipe($index);
     }
 });

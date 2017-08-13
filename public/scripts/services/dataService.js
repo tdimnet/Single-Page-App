@@ -2,7 +2,7 @@
 
 angular
   .module('app')
-  .service('DataService', function($http) {
+  .service('dataService', function($http) {
 
 
   this.getAllRecipes = function(callbackSuccess, callbackError) {
@@ -13,16 +13,12 @@ angular
   };
 
 
-  this.getAllCategories = function() {
+  this.getAllCategories = function (callbackSuccess, callbackError) {
     $http
       .get('/api/categories')
-      .then(function(data) {
-        console.log(data);
-      })
-      .catch(function(error) {
-        console.log(error);
-      })
-  };
+      .then(callbackSuccess)
+      .catch(callbackError)
+  }
 
 
   this.getAllFoodItems = function() {
