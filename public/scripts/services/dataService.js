@@ -5,15 +5,11 @@ angular
   .service('dataService', function($http) {
 
 
-  this.getAllRecipes = function() {
+  this.getAllRecipes = function(callbackSuccess, callbackError) {
     $http
       .get('/api/recipes')
-      .then(function(data) {
-        console.log(data);
-      })
-      .catch(function(error) {
-        console.log(error);
-      })
+      .then(callbackSuccess)
+      .catch(callbackError)
   };
 
 

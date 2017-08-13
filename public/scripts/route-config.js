@@ -18,8 +18,8 @@
   function config($routeProvider) {
     $routeProvider
       .when('/', {
-        controller: 'recipesCtrl',
-        controllerAs: 'recipesCtrl',
+        controller: 'RecipesController',
+        controllerAs: 'vm',
         templateUrl: 'templates/recipes.html'
       })
       .when('/edit/:id', {
