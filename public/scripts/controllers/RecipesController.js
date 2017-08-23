@@ -26,6 +26,10 @@
         }
       );
 
+      $scope.isEmptyRecipeList = function () {
+        // Maybe need other verifications but seems to work by now
+        return $scope.recipes === 0;
+      }
 
       $scope.addRecipe = function ($index) {
         console.log('The user wants to create a new recipe!!');

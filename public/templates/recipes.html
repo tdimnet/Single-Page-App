@@ -23,7 +23,7 @@
 
 <!-- TODO Add a directive to this div element so that it only displays
   when there are no recipes to display. -->
-<div class="grid-100 row">
+<div ng-show="isEmptyRecipeList()" class="grid-100 row">
   <div class="grid-70">
     <p>No recipes found!</p>
   </div>
