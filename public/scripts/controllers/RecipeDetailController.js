@@ -1,7 +1,9 @@
-'use strict';
+(function () {
+  'use strict';
 
-angular
-  .module('app')
-  .controller('RecipeDetailController', function ($scope, dataService) {
+  angular
+    .module('app')
+    .controller('RecipeDetailController', function ($scope, dataService) {
 
-  });
+    });
+})();
