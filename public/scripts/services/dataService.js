@@ -46,7 +46,7 @@ angular
 
 
   this.getRecipe = function (recipe) {
-    console.log("The " + recipe + " todo has been selected to edit!")
+    console.log("The recipe number " + recipe + " has been selected to edit!")
     // $http
     //   .get('/api/recipes/{id}')
     //   .then(callbackSuccess)
@@ -55,7 +55,7 @@ angular
 
 
   this.deleteRecipe = function (recipe) {
-    console.log("The " + recipe + " todo has been selected to delete!")
+    console.log("The recipe number " + recipe + " has been selected to delete!")
     // $http
     //   .get('/api/recipes/{id}')
     //   .then(callbackSuccess)
