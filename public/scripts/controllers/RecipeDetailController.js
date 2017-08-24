@@ -3,7 +3,11 @@
 
   angular
     .module('app')
-    .controller('RecipeDetailController', function ($scope, dataService) {
+    .controller('RecipeDetailController', function ($scope, $location, dataService) {
 
+
+      $scope.returnHomePage = function () {
+        $location.path('/')
+      };
     });
 })();

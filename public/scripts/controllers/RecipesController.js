@@ -3,7 +3,7 @@
 
   angular
     .module('app')
-    .controller('RecipesController', function ($scope, dataService) {
+    .controller('RecipesController', function ($scope, $location, dataService) {
 
 
       // Get all receipes from the database
@@ -33,6 +33,7 @@
 
       $scope.addRecipe = function ($index) {
         console.log('The user wants to create a new recipe!!');
+        $location.path('/add')
       };
 
       $scope.getRecipe = function ($index) {
