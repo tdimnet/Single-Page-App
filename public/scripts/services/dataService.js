@@ -19,7 +19,7 @@
         .get('/api/categories')
         .then(callbackSuccess)
         .catch(callbackError)
-    }
+    };
 
 
     this.getAllFoodItems = function() {

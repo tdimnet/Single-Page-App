@@ -66,6 +66,12 @@
         with the categories from the database. -->
       <select>
         <option value="">All Categories</option>
+        <option
+          ng-repeat="category in categories"
+          value="{{category._id}}"
+        >
+          {{category.name}}
+        </option>
       </select>
     </p>
   </div>
