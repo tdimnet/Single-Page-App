@@ -22,15 +22,11 @@
     };
 
 
-    this.getAllFoodItems = function() {
+    this.getAllFoodItems = function(callbackSuccess, callbackError) {
       $http
         .get('/api/fooditems')
-        .then(function(data) {
-          console.log(data);
-        })
-        .catch(function (error) {
-          console.log(error);
-        })
+        .then(callbackSuccess)
+        .catch(callbackError)
     };
 
     // TODO: See how to pass parameters to a http function

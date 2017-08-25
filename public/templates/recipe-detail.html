@@ -142,6 +142,12 @@
           populate the list with the food items from the database. -->
         <select>
           <option value="">Select Item</option>
+          <option
+            ng-repeat="foodItem in foodItems"
+            value="{{foodItem._id}}"
+          >
+            {{foodItem.name}}
+          </option>
         </select>
       </p>
     </div>
