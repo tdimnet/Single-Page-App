@@ -31,6 +31,11 @@
         controllerAs: 'vm',
         templateUrl: 'templates/recipe-detail.html'
       })
+      .when('/delete/:id', {
+        controller: 'DeleteRecipeController',
+        controllerAs: 'vm',
+        templateUrl: 'templates/delete-recipe.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
