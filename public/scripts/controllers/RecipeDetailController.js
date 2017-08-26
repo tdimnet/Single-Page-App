@@ -43,7 +43,7 @@
       };
 
       $scope.deleteStep = function () {
-        console.log('the user watns to delete a step item');
+        console.log('the user wants to delete a step item');
       };
 
 
