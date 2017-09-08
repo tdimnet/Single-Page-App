@@ -53,7 +53,7 @@
       // Gets the recipe for the specified ID
       this.getRecipeById = function (callbackSuccess, callbackError) {
         $http
-          .get('/api/recipes/{id}')
+          .get('/api/recipes/RavlD5kdXqAofJQ6')
           .then(callbackSuccess)
           .catch(callbackError)
       };
