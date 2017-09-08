@@ -17,6 +17,18 @@
         }
       );
 
+      // Get all categories from the database for the selected menu
+      dataService.getAllCategories(
+        // if correct
+        function (response) {
+          $scope.categories = response.data
+        },
+        // If not, for now, show error within the console
+        function (error) {
+          console.log(error);
+        }
+      );
+
 
       // When the user wants to add a new recipe
       $scope.addRecipe = function () {

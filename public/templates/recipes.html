@@ -6,6 +6,11 @@
       selects a new category so that you can refresh the recipes list. -->
     <select>
       <option value="">All Categories</option>
+      <option
+        ng-repeat="category in categories"
+        value="category._id">
+        {{category.name}}
+      </option>
     </select>
   </div>
   <div class="grid-70">
@@ -70,7 +75,7 @@
             delete the recipe when the user clicks on the 'Delete' link. -->
           <a
             class="no-action-link"
-            ng-click="deleteRecipe()"> 
+            ng-click="deleteRecipe()">
             <img src="images/delete.svg" height="12px">
             Delete
           </a>
