@@ -30,17 +30,6 @@
       );
 
 
-      // Test in order to get a recipe by id
-      dataService.getRecipeById(
-        function (response) {
-          console.log(response);
-        },
-        function (error) {
-          console.log(error);
-        }
-      )
-
-
       // When the user wants to add a new recipe
       $scope.addRecipe = function () {
         console.log('The user wants to create a new recipe');
