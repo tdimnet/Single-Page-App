@@ -5,7 +5,19 @@
     .module('app')
     .controller('RecipeViewController', function ($scope, $location, $routeParams, dataService) {
 
-      console.log($routeParams.id);
+			// Get the recipe according to the route parameters
+			dataService.getRecipeById(
+				// the ID of the recipe comming from the route parameter
+				$routeParams.id,
+				// If the id exists
+				function(response) {
+					console.log(response);
+				},
+				// If not, redirect to the home page
+				function(error) {
+					console.log(error);
+				}
+			);
 
     });
 })();

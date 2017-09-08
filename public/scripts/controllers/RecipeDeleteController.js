@@ -3,7 +3,7 @@
 
   angular
     .module('app')
-    .controller('RecipeDeleteController'; function ($scope, $location, $routeParams, dataService) {
+    .controller('RecipeDeleteController', function ($scope, $location, $routeParams, dataService) {
 
       console.log($routeParams.id);
 
