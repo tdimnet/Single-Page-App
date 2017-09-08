@@ -12,6 +12,7 @@
 				// If the id exists
 				function(response) {
 					console.log(response);
+					$scope.recipe = response.data;
 				},
 				// If not, redirect to the home page
 				function(error) {
