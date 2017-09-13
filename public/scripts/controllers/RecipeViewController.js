@@ -16,7 +16,7 @@
 				},
 				// If not, redirect to the home page
 				function(error) {
-					console.log(error);
+					$location.path('/');
 				}
 			);
 

@@ -31,7 +31,7 @@
         },
         // If not
         function (error) {
-          console.log(error);
+          $location.path('/');
         }
       );
 
