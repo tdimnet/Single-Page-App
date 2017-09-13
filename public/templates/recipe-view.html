@@ -1,3 +1,4 @@
+<!-- Recipe name -->
 <div class="grid-100 row controls">
   <div class="grid-80">
     <h2>Your Recipe: {{recipe.name}}</h2>
@@ -5,19 +6,16 @@
 </div>
 <div class="clear"></div>
 
-
+<!-- Recipe preparation and cooking time -->
 <div class="grid-100 row">
 	<div class="grid-80">
-		<div class="grid-50">
-			<h3>Preparation time: <small>{{recipe.prepTime}}</small></h3> 
-		</div>
-		<div class="grid-50">
-			<h3>Cooking time: <small>{{recipe.cookTime}}</small></h3> 
-		</div>
+		<h3>Preparation time: <small>{{recipe.prepTime}}</small></h3> 
+		<h3>Cooking time: <small>{{recipe.cookTime}}</small></h3> 
 	</div>
 </div>
 <div class="clear"></div>
 
+<!-- Recipe category and description -->
 <div class="grid-100 row">
 	<div class="grid-80">
 		<h3>Category: <small>{{recipe.category}}</small></h3> 
@@ -33,8 +31,31 @@
 			<li
 			ng-repeat="ingredient in recipe.ingredients">
 				<em>Food items: {{ingredient.foodItem}}</em>
-				<em>Condition</em>
-				<em>Amount</em>
+				<br>
+				<em>Condition: {{ingredient.condition}}</em>
+				<br>
+				<em>Amount: {{ingredient.amount}}</em>
+				<br>
+				<hr>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear"></div>
+
+<div class="grid-100 row">
+	<div class="grid-80">
+		<h3>List of ingredients:</h3> 
+		<ul>
+			<li
+			ng-repeat="ingredient in recipe.ingredients">
+				<em>Food items: {{ingredient.foodItem}}</em>
+				<br>
+				<em>Condition: {{ingredient.condition}}</em>
+				<br>
+				<em>Amount: {{ingredient.amount}}</em>
+				<br>
+				<hr>
 			</li>
 		</ul>
 	</div>
