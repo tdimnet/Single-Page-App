@@ -12,7 +12,7 @@
         $routeParams.id,
         // If correct
         function (response) {
-          console.log(response);
+					$scope.recipe = response.data;
         },
         // If not
         function (error) {
