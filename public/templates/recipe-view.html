@@ -24,6 +24,7 @@
 </div>
 <div class="clear"></div>
 
+<!-- Recipe list of ingredients -->
 <div class="grid-100 row">
 	<div class="grid-80">
 		<h3>List of ingredients:</h3> 
@@ -43,19 +44,14 @@
 </div>
 <div class="clear"></div>
 
+<!-- Recipe steps -->
 <div class="grid-100 row">
 	<div class="grid-80">
-		<h3>List of ingredients:</h3> 
+		<h3>Steps:</h3> 
 		<ul>
 			<li
-			ng-repeat="ingredient in recipe.ingredients">
-				<em>Food items: {{ingredient.foodItem}}</em>
-				<br>
-				<em>Condition: {{ingredient.condition}}</em>
-				<br>
-				<em>Amount: {{ingredient.amount}}</em>
-				<br>
-				<hr>
+			ng-repeat="step in recipe.steps">
+				<em>Step description:</em> {{step.description}}
 			</li>
 		</ul>
 	</div>
