@@ -1,11 +1,17 @@
 <div class="grid-100 row controls">
   <div class="grid-30">
-    <h2>Delete the recipe: </h2>
+    <h2>Delete the recipe: <small>{{recipe.name}}</small></h2>
   </div>
   <div class="grid-70">
     <div class="flush-right">
-      <button>Confirm Delete</button>
-			<button>Cancel Delete</button>
+      <button
+				ng-click="confirmDetele()">
+				Confirm Delete
+			</button>
+			<button
+				ng-click="cancelDetele()">
+				Cancel Delete
+			</button>
     </div>
   </div>
 </div>
