@@ -57,11 +57,15 @@
           .catch(callbackError)
       };
 
+			
+			//
+				// Need to see the Angular doc for put and post requests!
+			//
 
       // Updates the recipe for the specified ID
-      this.updateRecipeById = function (callbackSuccess, callbackError) {
+      this.updateRecipe = function (recipedId, callbackSuccess, callbackError) {
         $http
-          .put('/api/recipes/{id}')
+          .put('/api/recipes/' + recipedId)
           .then(callbackSuccess)
           .catch(callbackError)
       };
@@ -74,6 +78,10 @@
           .then(callbackSuccess)
           .catch(callbackError)
       };
+			
+			//
+				// END SEE ANGULAR DOCS
+			//
 
 
       // Deletes the recipe for the specified ID
