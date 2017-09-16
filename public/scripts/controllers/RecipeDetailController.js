@@ -23,6 +23,17 @@
 				$location.path('/');
 			};
 			
+			// Save the Added/Edited Recipe
+			$scope.saveRecipe = function() {
+				if ($location.url() === '/add') {
+					console.log('The user wants to add a new recipe');
+				} else {
+					console.log('The user wants to edit a recipe');
+				}
+			};
+					
+			
+			
 			
 			
 			//
