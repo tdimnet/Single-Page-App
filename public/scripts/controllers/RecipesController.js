@@ -6,10 +6,20 @@
     .controller('RecipesController', function ($scope, $location, dataService) {
 			
 			//
+				// Controller variables
+			//
+			$scope.currentCategory = {};
+			
+			//
 				// Controller functions
 			//
 			$scope.addRecipe = function() {
 				$location.path('/add');
+			};
+			
+			$scope.getsRecipeByCategory = function() {
+				var category = $scope.currentCategory ? $scope.currentCategory.name : "All Categories";
+				console.log(category);
 			};
 			
 			
