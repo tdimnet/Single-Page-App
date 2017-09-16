@@ -8,7 +8,21 @@
 			//
 				// Controller variables
 			//
+			// Recipe title
 			$scope.mainViewTitle = 'Add New Recipe';
+
+			// Recipe itself
+			$scope.recipe = {
+				name: "",
+				description: "",
+				category: "",
+				prepTime: "",
+				cookTime: "",
+				ingredients: [],
+				steps: []
+			};
+			
+			// All categories and food items
 			$scope.categories = [];
 			$scope.foodItems = [];
 			
@@ -34,7 +48,16 @@
 			};
 					
 			
+			// Add steps
+			$scope.addStep = function() {
+				console.log($scope.recipe.steps);
+				$scope.recipe.steps.push({});
+			};
 			
+			// Remove steps
+			$scope.removeStep = function(index) {
+				$scope.recipe.steps.splice(index, 1);
+			}
 			
 			
 			//
