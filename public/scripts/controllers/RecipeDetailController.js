@@ -4,6 +4,13 @@
   angular
     .module('app')
     .controller('RecipeDetailController', function ($scope, $location, $routeParams, dataService) {
+			
+			//
+				// Controller variables
+			//
+			$scope.mainViewTitle = 'Add New Recipe';
+			
+			
 			//
 				// Controller functions
 			//
@@ -27,6 +34,7 @@
 					// If correct
 					function (response) {
 						$scope.recipe = response.data;
+						$scope.mainViewTitle = $scope.recipe.name;
 					},
 					// If not, redirect to the home page
 					function (error) {
