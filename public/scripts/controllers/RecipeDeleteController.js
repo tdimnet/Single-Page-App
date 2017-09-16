@@ -10,7 +10,17 @@
 			//
 			// Deleting recipe when the delete button is clicked
 			$scope.confirmDetele = function() {
-				console.log('the user wants to delete the recipe');
+				console.log($routeParams.id);
+				dataService.deleteRecipe(
+					$routeParams.id,
+					function(response) {
+						console.log(response);
+						$location.path('/');
+					},
+					function(error) {
+						console.log(error);
+					}
+				);
 			};
 			
 			// Return to the home page of the web site
@@ -32,7 +42,7 @@
 				},
 				// If not, redirect to the home page
 				function(error) {
-					console.log(error);
+					$location.path('/');
 				}
 			);
 

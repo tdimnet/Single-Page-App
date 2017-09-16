@@ -77,9 +77,9 @@
 
 
       // Deletes the recipe for the specified ID
-      this.deleteRecipe = function (callbackSuccess, callbackError) {
+      this.deleteRecipe = function (recipedId, callbackSuccess, callbackError) {
         $http
-          .delete('/api/recipes/{id}')
+          .delete('/api/recipes/' + recipedId)
           .then(callbackSuccess)
           .catch(callbackError)
       };
