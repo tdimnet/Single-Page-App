@@ -9,6 +9,8 @@
 				// Controller variables
 			//
 			$scope.mainViewTitle = 'Add New Recipe';
+			$scope.categories = [];
+			$scope.foodItems = [];
 			
 			
 			//
@@ -42,5 +44,36 @@
 					}
 				);
 			}
+			
+			// Get all categories when the route is matched
+			dataService.getAllCategories(
+				function(response) {
+					$scope.categories = response.data;
+				},
+				function(error) {
+					console.log(error);
+				}
+			);
+			
+			// Get all food items
+			dataService.getAllFoodItems(
+				function(response) {
+					console.log(response);
+				},
+				function(error) {
+					console.log(error);
+				}
+			);
+			
     });
 })();
+
+
+
+
+
+
+
+
+
+
