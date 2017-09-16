@@ -41,10 +41,9 @@
 
 
       // Gets all of the recipes for the specified category
-      this.getRecipesByCategory = function (callbackSuccess, callbackError) {
+      this.getRecipesByCategory = function (category, callbackSuccess, callbackError) {
         $http
-          // Maybe have to change the line below
-          .get('/api/recipes?category={category}')
+          .get('/api/recipes?category=' + category)
           .then(callbackSuccess)
           .catch(callbackError)
       };

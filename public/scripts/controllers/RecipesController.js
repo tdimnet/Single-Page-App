@@ -17,9 +17,17 @@
 				$location.path('/add');
 			};
 			
-			$scope.getsRecipeByCategory = function() {
-				var category = $scope.currentCategory ? $scope.currentCategory.name : "All Categories";
-				console.log(category);
+			$scope.filterRecipeByCategory = function() {
+				var category = $scope.currentCategory ? $scope.currentCategory.name : "";
+				dataService.getRecipesByCategory(
+					category,
+					function (response) {
+						console.log(response);
+					},
+					function (error) {
+						console.log(error);
+					}
+				);
 			};
 			
 			
