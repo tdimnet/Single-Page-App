@@ -46,11 +46,20 @@
 				}
 				console.log($scope.recipe);
 			};
-					
+			
+			
+			// Add ingredient
+			$scope.addIngredient = function() {
+				$scope.recipe.ingredients.push({});
+			};
+			
+			// Remove ingredient
+			$scope.removeIngredient = function() {
+				console.log('The user wants to remove an ingredient');
+			};		
 			
 			// Add steps
 			$scope.addStep = function() {
-				console.log($scope.recipe.steps);
 				$scope.recipe.steps.push({});
 			};
 			
