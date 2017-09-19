@@ -1,14 +1,6 @@
 (function () {
   'use strict';
-
-
-  /*
-    This service makes all calls to the REST API
-    --
-    Few things to have in mind:
-      - see if the request if parameters are made properly
-      - see how post, put and delete methods work by looking for snippets
-  */
+	
   angular
     .module('app')
     .service('dataService', function ($http) {
@@ -57,10 +49,6 @@
           .catch(callbackError)
       };
 
-			
-			//
-				// Need to see the Angular doc for put and post requests!
-			//
 
       // Updates the recipe for the specified ID
       this.updateRecipe = function (recipe, callbackSuccess, callbackError) {
@@ -79,10 +67,6 @@
           .catch(callbackError)
       };
 			
-			//
-				// END SEE ANGULAR DOCS
-			//
-
 
       // Deletes the recipe for the specified ID
       this.deleteRecipe = function (recipedId, callbackSuccess, callbackError) {
