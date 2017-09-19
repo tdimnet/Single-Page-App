@@ -72,9 +72,9 @@
 
 
       // Adds a recipe
-      this.addRecipe = function (callbackSuccess, callbackError) {
+      this.addRecipe = function (recipe, callbackSuccess, callbackError) {
         $http
-          .post('/api/recipes')
+          .post('/api/recipes', recipe)
           .then(callbackSuccess)
           .catch(callbackError)
       };

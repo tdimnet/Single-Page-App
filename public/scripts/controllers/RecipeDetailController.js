@@ -40,7 +40,8 @@
 			// Save the Added/Edited Recipe
 			$scope.saveRecipe = function() {
 				if ($location.url() === '/add') {
-					console.log('The user wants to add a new recipe');
+					dataService.addRecipe($scope.recipe);
+					$location.path('/');
 				} else {
 					dataService.updateRecipe($scope.recipe);
 					$location.path('/');
