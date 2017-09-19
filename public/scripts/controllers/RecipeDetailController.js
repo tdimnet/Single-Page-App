@@ -30,7 +30,6 @@
 			//
 				// Controller functions
 			//
-			// Main functions ?
 			
 			// Return to the home page of the web site
 			$scope.cancelEdit = function() {
