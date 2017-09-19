@@ -102,7 +102,7 @@
 			// Get all food items
 			dataService.getAllFoodItems(
 				function(response) {
-					console.log(response);
+					$scope.foodItems = response.data;
 				},
 				function(error) {
 					console.log(error);
