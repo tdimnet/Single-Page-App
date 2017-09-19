@@ -81,7 +81,7 @@
 					// If correct
 					function (response) {
 						$scope.recipe = response.data;
-						$scope.mainViewTitle = $scope.recipe.name;
+						$scope.mainViewTitle = 'Edit ' + $scope.recipe.name;
 					},
 					// If not, redirect to the home page
 					function (error) {
