@@ -42,9 +42,9 @@
 				if ($location.url() === '/add') {
 					console.log('The user wants to add a new recipe');
 				} else {
-					console.log('The user wants to add a new recipe');
+					dataService.updateRecipe($scope.recipe);
+					$location.path('/');
 				}
-				console.log($scope.recipe);
 			};
 			
 			

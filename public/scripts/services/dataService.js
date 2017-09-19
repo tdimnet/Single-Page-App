@@ -63,9 +63,9 @@
 			//
 
       // Updates the recipe for the specified ID
-      this.updateRecipe = function (recipedId, callbackSuccess, callbackError) {
+      this.updateRecipe = function (recipe, callbackSuccess, callbackError) {
         $http
-          .put('/api/recipes/' + recipedId)
+          .put('/api/recipes/' + recipe._id, recipe)
           .then(callbackSuccess)
           .catch(callbackError)
       };
